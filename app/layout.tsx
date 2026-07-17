@@ -12,12 +12,59 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kingdeals.netlify.app"),
+
   title: {
-    default: "KingDeals",
+    default: "KingDeals | Guide, Recensioni e Confronti per Acquistare Meglio",
     template: "%s | KingDeals",
   },
+
   description:
-    "Guide all'acquisto, recensioni originali e confronti per aiutarti a scegliere prodotti e servizi con maggiore consapevolezza.",
+    "KingDeals pubblica guide, recensioni, confronti e approfondimenti originali per aiutarti a scegliere prodotti e servizi in modo più consapevole.",
+
+  applicationName: "KingDeals",
+
+  authors: [
+    {
+      name: "KingDeals",
+    },
+  ],
+
+  creator: "KingDeals",
+  publisher: "KingDeals",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "it_IT",
+    url: "/",
+    siteName: "KingDeals",
+    title: "KingDeals | Guide, Recensioni e Confronti per Acquistare Meglio",
+    description:
+      "Guide, recensioni, confronti e approfondimenti originali per aiutarti a scegliere prodotti e servizi in modo più consapevole.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "KingDeals | Guide, Recensioni e Confronti per Acquistare Meglio",
+    description:
+      "Guide, recensioni, confronti e approfondimenti originali per aiutarti a scegliere prodotti e servizi in modo più consapevole.",
+  },
 };
 
 export default function RootLayout({
