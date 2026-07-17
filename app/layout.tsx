@@ -5,6 +5,7 @@ import "./globals.css";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/theme-provider";
+import { siteConfig } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,26 +13,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kingdeals.netlify.app"),
+  metadataBase: new URL(siteConfig.url),
 
   title: {
-    default: "KingDeals | Guide, Recensioni e Confronti per Acquistare Meglio",
-    template: "%s | KingDeals",
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
   },
 
-  description:
-    "KingDeals pubblica guide, recensioni, confronti e approfondimenti originali per aiutarti a scegliere prodotti e servizi in modo più consapevole.",
+  description: siteConfig.description,
 
-  applicationName: "KingDeals",
+  applicationName: siteConfig.name,
 
   authors: [
     {
-      name: "KingDeals",
+      name: siteConfig.author,
     },
   ],
 
-  creator: "KingDeals",
-  publisher: "KingDeals",
+  creator: siteConfig.author,
+  publisher: siteConfig.name,
 
   alternates: {
     canonical: "/",
@@ -51,19 +51,17 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    locale: "it_IT",
+    locale: siteConfig.locale,
     url: "/",
-    siteName: "KingDeals",
-    title: "KingDeals | Guide, Recensioni e Confronti per Acquistare Meglio",
-    description:
-      "Guide, recensioni, confronti e approfondimenti originali per aiutarti a scegliere prodotti e servizi in modo più consapevole.",
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "KingDeals | Guide, Recensioni e Confronti per Acquistare Meglio",
-    description:
-      "Guide, recensioni, confronti e approfondimenti originali per aiutarti a scegliere prodotti e servizi in modo più consapevole.",
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
 };
 

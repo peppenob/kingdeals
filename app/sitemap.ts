@@ -1,72 +1,73 @@
 import type { MetadataRoute } from "next";
 
+import { siteConfig } from "@/lib/site";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://kingdeals.netlify.app";
   const lastModified = new Date();
 
   return [
     {
-      url: siteUrl,
+      url: siteConfig.url,
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${siteUrl}/guide`,
+      url: `${siteConfig.url}/guide`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${siteUrl}/recensioni`,
+      url: `${siteConfig.url}/recensioni`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${siteUrl}/confronti`,
+      url: `${siteConfig.url}/confronti`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${siteUrl}/servizi`,
+      url: `${siteConfig.url}/servizi`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${siteUrl}/blog`,
+      url: `${siteConfig.url}/blog`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${siteUrl}/chi-siamo`,
+      url: `${siteConfig.url}/chi-siamo`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.5,
     },
     {
-      url: `${siteUrl}/contatti`,
+      url: `${siteConfig.url}/contatti`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.4,
     },
     {
-      url: `${siteUrl}/privacy`,
+      url: `${siteConfig.url}/privacy`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${siteUrl}/cookie`,
+      url: `${siteConfig.url}/cookie`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${siteUrl}/disclaimer`,
+      url: `${siteConfig.url}/disclaimer`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.3,
